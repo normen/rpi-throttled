@@ -6,11 +6,11 @@ Library to check for undervoltage and overheating events on a Raspberry Pi
 This library uses the `vcgencmd get_throttled` command to check for past or current under-voltage or over-heating events as well as the current state of throttling of the Raspberry Pi
 
 ## Usage
-###Command Line
+### Command Line
 The npm package will install a command line tool to display the status, enter `rpi-throttled` to get a readout.
 
-###Library
-Use the library in a
+### Library
+Use the library as shown below.
 
 ```
 var RpiThrottled = require('rpi-throttled');
