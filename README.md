@@ -21,9 +21,11 @@ var rpi = new RpiThrottled();
 //available values
 console.log("Throttled:" + rpi.throttled);
 console.log("Under Voltage:" + rpi.underVoltage);
+console.log("Soft Temp Limit:" + rpi.softTempLimit);
 console.log("Frequency Capped:" + rpi.frequencyCapped);
 console.log("Throttling Occurred:" + rpi.throttledOccurred);
 console.log("Under Voltage Occurred:" + rpi.underVoltageOccurred);
+console.log("Soft Temp Limit Occurred:" + rpi.softTempLimitOccurred);
 console.log("Frequency Capped Occurred:" + rpi.frequencyCappedOccurred);
 
 //re-read current values from rPi

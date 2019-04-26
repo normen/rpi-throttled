@@ -5,9 +5,11 @@ function RpiThrottled(){
   this.underVoltage = false;
   this.frequencyCapped = false;
   this.throttled = false;
+  this.softTempLimit = false;
   this.underVoltageOccurred = false;
   this.frequencyCappedOccurred = false;
   this.throttledOccurred = false;
+  this.softTempLimitOccurred = false;
   this.update();
 };
 
@@ -23,17 +25,21 @@ RpiThrottled.prototype = {
       that.underVoltage = (number >> 0) & 1;
       that.frequencyCapped = (number >> 1) & 1;
       that.throttled = (number >> 2) & 1;
+      that.softTempLimit = (number >> 3) & 1;
       that.underVoltageOccurred = (number >> 16) & 1;
       that.frequencyCappedOccurred = (number >> 17) & 1;
       that.throttledOccurred = (number >> 18) & 1;
+      that.softTempLimitOccurred = (number >> 19) & 1;
     });
   },
   printData: function(){
     console.log("Throttled................: " + this.throttled);
     console.log("Under Voltage............: " + this.underVoltage);
+    console.log("Soft Temp Limit..........: " + this.softTempLimit);
     console.log("Frequency Capped.........: " + this.frequencyCapped);
     console.log("Throttling Occurred......: " + this.throttledOccurred);
     console.log("Under Voltage Occurred...: " + this.underVoltageOccurred);
+    console.log("Soft Temp Limit Occurred.: " + this.softTempLimitOccurred);
     console.log("Frequency Capped Occurred: " + this.frequencyCappedOccurred);
   }
 }

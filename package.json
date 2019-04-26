@@ -1,6 +1,6 @@
 {
   "name": "rpi-throttled",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Library to check for undervoltage and overheating events on a Raspberry Pi",
   "main": "lib.js",
   "bin": {
