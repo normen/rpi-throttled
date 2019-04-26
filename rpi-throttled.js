@@ -4,4 +4,3 @@ var rpi = new RpiThrottled();
 rpi.on('updated',function(){
   rpi.printData();
 });
-rpi.update();

@@ -4,8 +4,6 @@ const spawn = require('child_process').spawn;
 const EventEmitter = require('events').EventEmitter;
 const util = require('util');
 
-//const { exec } = require('child_process');
-
 function RpiThrottled(){
   this.underVoltage = false;
   this.frequencyCapped = false;
@@ -15,6 +13,7 @@ function RpiThrottled(){
   this.frequencyCappedOccurred = false;
   this.throttledOccurred = false;
   this.softTempLimitOccurred = false;
+  this.update();
 };
 
 RpiThrottled.prototype = {
